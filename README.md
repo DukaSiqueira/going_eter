@@ -3,4 +3,5 @@
 
 Dependências:
 
-github.com/gin-gonic/gin
+    github.com/gin-gonic/gin - Framewor Gin para lidar com a camada HTTP
+    github.com/joho/godotenv - Pacote para lidar com o arquivos de configuração do ambiente

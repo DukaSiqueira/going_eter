@@ -1,6 +1,15 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"goingEter/config"
+	"os"
+
+	"github.com/gin-gonic/gin"
+)
+
+func init() {
+	config.LoadEnvs()
+}
 
 func main() {
 
@@ -8,9 +17,9 @@ func main() {
 
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "pong",
+			"message": "Hello, World!!",
 		})
-	}
+	})
 
-	router.Run(":8080")
+	router.Run(os.Getenv("SERVER_PORT"))
 }
