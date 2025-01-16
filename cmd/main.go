@@ -9,6 +9,7 @@ import (
 
 func init() {
 	config.LoadEnvs()
+	config.ConnectDB()
 }
 
 func main() {
