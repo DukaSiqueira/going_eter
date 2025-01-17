@@ -1,14 +1,15 @@
 package main
 
 import (
-	"goingEter/config"
+	"goingEter/infrastructure/database"
+	"goingEter/infrastructure/environments"
 	"goingEter/routes"
 	"os"
 )
 
 func init() {
-	config.LoadEnvs()
-	config.ConnectDB()
+	environments.LoadEnv()
+	database.ConnectDB()
 }
 
 func main() {
